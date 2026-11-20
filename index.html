@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VODIY CRUNCH — Andijondagi Zamonaviy Fast Food va Do‘kon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="apple.css" />
+</head>
+<body>
+  <!-- Top Promo Bar -->
+  <div class="top-banner">
+    <span>🔥 Andijon shahri bo‘ylab tezkor yetkazib berish: o‘rtacha <strong>20–30 daqiqa</strong> • 120 000 so‘mdan yuqori buyurtmaga bepul yetkazish!</span>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <span class="brand-badge">VC</span>
+        <span class="brand-text">VODIY <strong>CRUNCH</strong> <small>Andijon</small></span>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="#menu-section">Menyu</a>
+        <a href="#store-section">Internet Do‘kon</a>
+        <a href="#why-us">Afzalliklar</a>
+        <a href="#location">Manzil</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-trigger" id="openCartBtn" aria-label="Savatchani ochish">
+          <span>Savatcha</span>
+          <span class="cart-pill" id="cartCount">0</span>
+        </button>
+        <button class="burger" id="burgerBtn" aria-label="Menyuni ochish">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="pill-tag">📍 Andijon shahri • Har kuni 09:00 – 01:00</span>
+        <h1>Issiq, tiniq va <span>10 daqiqada</span> oshxonadan chiqadi!</h1>
+        <p>
+          Haqiqiy mol go‘shti kotletlari, yangi pishirilgan bulochkalar, maxsus vodiy souslari
+          hamda uy va ofis uchun firma kiyim-sous to‘plamlari bitta platformada.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#menu-section" class="btn btn-primary">Menyuni ko‘rish</a>
+          <a href="#store-section" class="btn btn-ghost">Do‘konga o‘tish</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <strong>8–15 min</strong>
+            <span>O‘rtacha tayyorlanish</span>
+          </div>
+          <div class="stat-box">
+            <strong>4.9 ★</strong>
+            <span>Andijon mijozlari bahosi</span>
+          </div>
+          <div class="stat-box">
+            <strong>25+</strong>
+            <span>Taom va do‘kon mahsuloti</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card-main">
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=85"
+            alt="Vodiy Double Smash Burger"
+          />
+          <div class="floating-badge badge-time">⏱ Tayyorlanishi: 12 daqiqa</div>
+          <div class="floating-badge badge-price">🔥 74 000 so‘m</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu & Shop Section -->
+  <section class="catalog-section" id="menu-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Tezkor Buyurtma</span>
+          <h2>Issiq Menyu va Narxlar</h2>
+        </div>
+
+        <div class="search-wrap">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Taom yoki mahsulot qidirish (masalan: Burger, Roll, Cola)..."
+          />
+        </div>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="category-tabs" id="categoryTabs">
+        <button class="tab-btn active" data-category="all">Barchasi</button>
+        <button class="tab-btn" data-category="burger">Burgerlar</button>
+        <button class="tab-btn" data-category="roll">Lavash &amp; Roll</button>
+        <button class="tab-btn" data-category="crispy">Crispy Tovuq &amp; Kartoshka</button>
+        <button class="tab-btn" data-category="drink">Ichimlik &amp; Desert</button>
+      </div>
+
+      <!-- Food Grid -->
+      <div class="product-grid" id="foodGrid"></div>
+    </div>
+  </section>
+
+  <!-- Online Store Section -->
+  <section class="catalog-section store-bg" id="store-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Vodiy Crunch Store</span>
+          <h2>Internet Do‘kon — Katta Setlar, Souslar va Merch</h2>
+        </div>
+        <p class="section-sub">
+          Oilaviy ziyofat, ofis tushligi yoki uy uchun uzoq saqlanadigan firma mahsulotlari.
+        </p>
+      </div>
+
+      <div class="product-grid" id="storeGrid"></div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why-section" id="why-us">
+    <div class="container">
+      <div class="section-head centered">
+        <div>
+          <span class="eyebrow">Sifat Standarti</span>
+          <h2>Nima uchun Andijonda Vodiy Crunch?</h2>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⏱</div>
+          <h3>Aniq Tayyorlanish Vaqti</h3>
+          <p>Har bir pozitsiya uchun oshxonadagi real tayyorlanish vaqti yozilgan — kutish noaniqligi yo‘q.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🥩</div>
+          <h3>Kundalik Yangi Mahsulot</h3>
+          <p>Go‘sht, ko‘kat, pishloq va bulochkalar har tong yangi yetkazib beriladi; muzlatilgan yarim tayyor mahsulot ishlatilmaydi.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛵</div>
+          <h3>Andijon Bo‘ylab Tez Yetkazish</h3>
+          <p>Markaz, Bog‘ishamol, Bobur shoh ko‘chasi, Eski shahar va yaqin hududlarga issiq termosumkada yetkazib beramiz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Footer -->
+  <footer class="footer" id="location">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-badge">VC</span>
+          <span class="brand-text">VODIY <strong>CRUNCH</strong></span>
+        </div>
+        <p class="footer-desc">
+          Asaka shahri, Marg'iloniy ko‘chasi, 1b-uy (Mo‘ljal Tepa bozor yaqinida).<br />
+          Aloqa markazi: +998 (77) 259-29-50 • +998 (77) 209-97-05
+        </p>
+      </div>
+
+      <div class="footer-hours">
+        <h4>Ish vaqti</h4>
+        <p>Dushanba – Shanbagacha: 08:00 – 00:00</p>
+        <p>Yakshanba dam olish kuni</p>
+        <p>Tungi yetkazib berish: 23:00 gacha</p>
+      </div>
+
+      <div class="footer-hours">
+        <h4>To‘lov usullari</h4>
+        <p>Click, Payme, Uzcard / Humo va Naqd pul</p>
+        <p>© 2026 Vodiy Fast Food Asaka. Barcha huquqlar himoyalangan.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Backdrop -->
+  <div class="backdrop" id="backdrop"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-head">
+      <div>
+        <h3>Buyurtma Savatchasi</h3>
+        <small id="prepEstimateText">Tayyorlanish vaqti: ~5 daqiqa</small>
+      </div>
+      <button class="icon-close" id="closeCartBtn">✕</button>
+    </div>
+
+    <div class="delivery-mode">
+      <button class="mode-btn active" data-mode="delivery">🛵 Yetkazib berish</button>
+      <button class="mode-btn" data-mode="pickup">🏃 Olib ketish</button>
+    </div>
+
+    <div class="district-box" id="districtBox">
+      <label for="districtSelect">Andijon hududini tanlang:</label>
+      <select id="districtSelect">
+        <option value="Markaz" data-fee="12000">Andijon Markazi (+12 000 so‘m)</option>
+        <option value="Bobur shoh ko'chasi" data-fee="12000">Bobur shoh ko‘chasi (+12 000 so‘m)</option>
+        <option value="Bog'ishamol" data-fee="15000">Bog‘ishamol (+15 000 so‘m)</option>
+        <option value="Eski shahar" data-fee="15000">Eski shahar (+15 000 so‘m)</option>
+        <option value="Yangi bozor / Shimoliy" data-fee="18000">Shimoliy / Yangi bozor (+18 000 so‘m)</option>
+      </select>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-summary">
+      <div class="sum-row">
+        <span>Mahsulotlar:</span>
+        <span id="subtotalVal">0 so‘m</span>
+      </div>
+      <div class="sum-row">
+        <span>Yetkazish:</span>
+        <span id="deliveryFeeVal">0 so‘m</span>
+      </div>
+      <div class="sum-row total">
+        <span>Jami to‘lov:</span>
+        <strong id="totalVal">0 so‘m</strong>
+      </div>
+      <button class="btn btn-primary btn-full" id="openCheckoutBtn">Buyurtmani rasmiylashtirish</button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="icon-close modal-x" id="closeCheckoutBtn">✕</button>
+      <h3>Buyurtmani Tasdiqlash</h3>
+      <p class="modal-sub" id="checkoutSummaryText">Buyurtma ma’lumotlarini kiriting.</p>
+
+      <form id="checkoutForm" class="checkout-form">
+        <label>
+          Ismingiz
+          <input type="text" id="customerName" required placeholder="Masalan: Ulug'bek" />
+        </label>
+        <label>
+          Telefon raqam
+          <input type="tel" id="customerPhone" required placeholder="+998 77 259 29 50" />
+        </label>
+        <label id="addressField">
+          Manzil (ko‘cha, uy yoki mo‘ljal)
+          <input type="text" id="customerAddress" placeholder="Masalan: Navoiy ko‘chasi, 18-uy" />
+        </label>
+        <button type="submit" class="btn btn-primary btn-full">Buyurtma berish</button>
+      </form>
+
+      <div class="success-box" id="orderSuccessBox" hidden>
+        <h4>✅ Buyurtmangiz qabul qilindi!</h4>
+        <p id="orderConfirmDetails"></p>
+        <button class="btn btn-primary btn-full" id="doneOrderBtn">Yopish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="apple.js"></script>
+</body>
+</html>
